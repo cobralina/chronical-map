@@ -1,0 +1,134 @@
+@use "@faz/dv-globals/scss/dv-globals.scss" as *;
+
+@mixin input-range__old {
+  /*Chrome, Safari, Opera, and Edge Chromium*/
+  &::-webkit-slider-runnable-track {
+    height: 20px;
+    background: var(--dv-grey-700);
+    border-radius: 16px;
+  }
+
+  /*Firefox*/
+  &::-moz-range-track {
+    height: 20px;
+    background: var(--dv-grey-700);
+    border-radius: 20px;
+  }
+
+  & {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 16px;
+    outline: none;
+    /*remove default focus style*/
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  /*Chrome, Safari, Opera, and Edge Chromium */
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--dv-white);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--chronicle-range-border);
+    box-shadow: -1410px 0 0 1400px var(--chronicle-range-fill);
+    margin-top: 0px;
+    /*(trackheight/2) - (thumbheight/2)*/
+  }
+
+  /*****Firefox *****/
+  &::-moz-range-thumb {
+    background-color: var(--dv-white);
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    /*Removes default border-radius that FF applies*/
+    border: 2px solid var(--chronicle-range-border);
+    box-shadow: -1410px 0 0 1400px var(--chronicle-range-fill);
+  }
+
+  /***Focus/Active/Hover***/
+  &::-webkit-slider-thumb:hover {
+    border: 2px solid var(--chronicle-range-border-hover);
+    box-shadow: -1410px 0 0 1400px var(--chronicle-range-fill-hover);
+  }
+
+  &:active::-webkit-slider-thumb {
+    border: 3px solid var(--chronicle-range-border-hover);
+    box-shadow: -1410px 0 0 1400px var(--chronicle-range-fill-hover);
+  }
+
+  /* Hover, active & focus Thumb: Firfox */
+
+  &::-moz-range-thumb:hover {
+    border: 2px solid var(--chronicle-range-border-hover);
+    box-shadow: -1410px 0 0 1400px var(--chronicle-range-fill-hover);
+  }
+
+  &:active::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    border: 3px solid var(--chronicle-range-border-hover);
+    box-shadow: -1410px 0 0 1400px var(--chronicle-range-fill-hover);
+  }
+}
+
+@mixin input-range {
+  & {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: 0 !important;
+    margin: 0;
+    z-index: 4; // über dem custom Thumb, damit Klicks durchkommen
+  }
+
+  &::-webkit-slider-runnable-track {
+    background: transparent;
+    height: 2px;
+  }
+
+  &::-moz-range-track {
+    background: transparent;
+    height: 2px;
+  }
+
+  // Nativer Thumb unsichtbar – wir nutzen .slider-thumb
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 36px;
+    height: 24px;
+    border-radius: 6px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin-top: -12px;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &::-moz-range-thumb {
+    width: 36px;
+    height: 24px;
+    border-radius: 6px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: grab;
+  }
+}

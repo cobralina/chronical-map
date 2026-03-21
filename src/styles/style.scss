@@ -1,0 +1,38 @@
+@use "./custom/main";
+@use "@faz/dv-globals/scss/dv-globals.scss" as *;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--dv-black);
+  background-color: var(--dv-white);
+}
+
+#iran-war-chronology {
+  font-family: $sans, Helvetica, Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  color: var(--dv-black);
+  background-color: var(--dv-white);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+#iran-war-chronology *,
+#iran-war-chronology *::before,
+#iran-war-chronology *::after {
+  box-sizing: border-box;
+}
+
+#iran-war-chronology .maplibregl-popup-content {
+  font-family: inherit;
+}
+
+@media (max-width: 720px) {
+  #iran-war-chronology {
+    padding: 1rem;
+  }
+}

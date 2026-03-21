@@ -1,0 +1,117 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Iran" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [53.0, 32.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Irak" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.3, 32.5]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Saudi-Arabien" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [42.7, 26.27]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Syrien" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.86, 35.39]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Türkei" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.13, 38.95]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Zypern" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [33.17, 35.18]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Jordanien" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.35, 32.1]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Israel" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.75, 31.3]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ägypten" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [26.9, 26.8]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Turkmenistan" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [56.56, 39.0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Afghanistan" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [63.2, 33.76]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Kuwait" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.27, 29.46]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Katar" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [51.09, 25.46]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Vereinigte Arabische Emirate" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [52.87, 23.89]
+      }
+    }
+  ]
+}

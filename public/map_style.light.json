@@ -1,0 +1,197 @@
+{
+  "version": 8,
+  "name": "Mideast PMTiles Basemap Light",
+  "sources": {
+    "combined-pmtiles": {
+      "type": "vector",
+      "url": "pmtiles:///mideast_combined.pmtiles"
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#c4d8dd"
+      }
+    },
+    {
+      "id": "pmtiles-land-fill",
+      "type": "fill",
+      "source": "combined-pmtiles",
+      "source-layer": "land",
+      "filter": [
+        "==",
+        [
+          "geometry-type"
+        ],
+        "Polygon"
+      ],
+      "paint": {
+        "fill-color": "#EAEAEC",
+        "fill-opacity": 0.95
+      }
+    },
+    {
+      "id": "pmtiles-land-line",
+      "type": "line",
+      "source": "combined-pmtiles",
+      "source-layer": "land",
+      "paint": {
+        "line-color": "#E3E3E3",
+        "line-width": 1,
+        "line-opacity": 0.75
+      }
+    },
+    {
+      "id": "country-outlines-line",
+      "type": "line",
+      "source": "combined-pmtiles",
+      "source-layer": "country_outlines",
+      "paint": {
+        "line-color": "#aaaaaa",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0.6,
+          8,
+          1.2
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0.55,
+          8,
+          0.9
+        ]
+      }
+    },
+    {
+      "id": "inland-waters-fill",
+      "type": "fill",
+      "source": "combined-pmtiles",
+      "source-layer": "inland_waters",
+      "paint": {
+        "fill-color": "#c4d8dd",
+        "fill-opacity": 0.88
+      }
+    },
+    {
+      "id": "inland-waters-line",
+      "type": "line",
+      "source": "combined-pmtiles",
+      "source-layer": "inland_waters",
+      "paint": {
+        "line-color": "#c4d8dd",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0.35,
+          8,
+          0.9
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0.5,
+          8,
+          0.75
+        ]
+      }
+    },
+    {
+      "id": "admin1-regions-line",
+      "type": "line",
+      "source": "combined-pmtiles",
+      "source-layer": "admin1_regions",
+      "paint": {
+        "line-color": "#b8b8b8",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0.25,
+          8,
+          0.7
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0.25,
+          8,
+          0.6
+        ]
+      }
+    },
+    {
+      "id": "major-rivers-line",
+      "type": "line",
+      "source": "combined-pmtiles",
+      "source-layer": "major_rivers",
+      "paint": {
+        "line-color": "#c4d8dd",
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0.4,
+          8,
+          1.2
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          3,
+          0.5,
+          8,
+          0.8
+        ]
+      }
+    }
+  ]
+}

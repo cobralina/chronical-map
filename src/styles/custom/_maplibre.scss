@@ -1,0 +1,103 @@
+@use "@faz/dv-globals/scss/dv-globals.scss" as *;
+
+:root,
+.map-wrapper[data-theme="light"] {
+  --map-border-color: var(--dv-grey-600);
+  --map-error-color: #{$red-l};
+  --map-popup-background: var(--dv-white);
+  --map-popup-text-color: var(--dv-black);
+  --map-tooltip-separator: var(--dv-grey-700);
+  --map-control-icon-color: var(--dv-black);
+  --map-control-icon-hover-color: var(--dv-grey-400);
+  --map-control-background-hover: var(--dv-white);
+  --map-control-reset-fill: var(--dv-white);
+}
+
+.map-wrapper[data-theme="dark"] {
+  --map-border-color: var(--dv-grey-700);
+  --map-error-color: #{$light-red-d};
+  --map-popup-background: var(--dv-white);
+  --map-popup-text-color: var(--dv-black);
+  --map-tooltip-separator: var(--dv-grey-700);
+  --map-control-icon-color: var(--dv-black);
+  --map-control-icon-hover-color: var(--dv-grey-400);
+  --map-control-background-hover: var(--dv-white);
+  --map-control-reset-fill: var(--dv-white);
+}
+
+#iran-war-chronology {
+  color-scheme: light dark;
+
+  .map {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    min-height: 420px;
+  }
+
+  /* MapLibre controls */
+  .maplibregl-ctrl-group:not(:empty) {
+    box-shadow: none;
+  }
+
+  .maplibregl-ctrl-group {
+    overflow: visible;
+    background: transparent;
+  }
+
+  .maplibregl-ctrl-group button {
+    height: 34px;
+    width: 34px;
+    color: var(--map-control-icon-color);
+    border: 0;
+    box-shadow: none;
+    transition:
+      color 120ms ease,
+      background-color 120ms ease,
+      transform 120ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .maplibregl-ctrl-group button:hover,
+  .maplibregl-ctrl-group button:focus-visible {
+    color: var(--map-control-icon-hover-color);
+    background-color: transparent;
+  }
+
+  .maplibregl-ctrl-group button svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .maplibregl-ctrl-group svg circle {
+    fill: var(--map-control-reset-fill);
+  }
+
+  .maplibregl-popup-content {
+    background: var(--map-popup-background);
+    color: var(--map-popup-text-color);
+    border-radius: 2px;
+    padding: 10px 12px;
+    padding-top: 15px;
+    //max-width: 120px;
+    line-height: 1.2rem;
+  }
+
+  .maplibregl-popup-tip {
+    border-top-color: var(--map-popup-background);
+    border-bottom-color: var(--map-popup-background);
+  }
+
+  .maplibregl-popup-close-button {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--dv-grey-300);
+  }
+
+  .maplibregl-popup-close-button:hover {
+    background-color: rgb(0, 0, 0, 0);
+    color: var(--dv-black);
+  }
+}

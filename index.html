@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="%VITE_APP_BASE_URL%/" />
+    <title>iran-war-chronology</title>
+  </head>
+  <body style="padding: 0; margin: 0">
+    <div id="iran-war-chronology"></div>
+    <script>
+    (() => {
+      const DEFAULT_OPTIONS = {
+        targetSelector: '#iran-war-chronology',
+        messageType: 'vite-iframe-resize-iran-war-chronology',
+        debounceMs: 200
+      }
+    
+      const debounce = (fn, delay = 150) => {
+        let timeout
+        return (...args) => {
+          clearTimeout(timeout)
+          timeout = setTimeout(() => fn(...args), delay)
+        }
+      }
+    
+      const startIframeResizeObserver = (options = {}) => {
+        if (typeof window === 'undefined' || typeof document === 'undefined') {
+          return
+        }
+    
+        if (window.parent === window) {
+          return
+        }
+    
+        if (!('ResizeObserver' in window)) {
+          return
+        }
+    
+        const config = { ...DEFAULT_OPTIONS, ...options }
+        const target = document.querySelector(config.targetSelector)
+    
+        if (!target) {
+          return
+        }
+    
+        const postHeight = () => {
+          const height = target.offsetHeight
+          window.parent.postMessage(
+            { type: config.messageType, height },
+            '*'
+          )
+        }
+    
+        const debouncedPost = debounce(postHeight, config.debounceMs)
+        const observer = new ResizeObserver(() => debouncedPost())
+    
+        observer.observe(target)
+        window.addEventListener('resize', debouncedPost)
+        window.addEventListener('load', debouncedPost)
+    
+        debouncedPost()
+    
+        return () => {
+          observer.disconnect()
+          window.removeEventListener('resize', debouncedPost)
+          window.removeEventListener('load', debouncedPost)
+        }
+      }
+    
+      const bootstrapIframeResizeObserver = () => {
+        const dispose = startIframeResizeObserver()
+    
+        if (typeof dispose === 'function') {
+          window.addEventListener('beforeunload', () => dispose())
+        }
+      }
+    
+      if (typeof document === 'undefined') {
+        return
+      }
+    
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bootstrapIframeResizeObserver, { once: true })
+      } else {
+        bootstrapIframeResizeObserver()
+      }
+    })()
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

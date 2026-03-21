@@ -1,0 +1,27 @@
+{
+  "name": "iran-war-chronology",
+  "private": true,
+  "version": "0.1.4",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "production": "vite build",
+    "release": "vite build",
+    "test": "vite build --mode test",
+    "stage": "vite build --mode stage",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "sass": "*",
+    "@faz/dv-globals": "*",
+    "maplibre-gl": "^5.20.0",
+    "pmtiles": "^4.4.0"
+  },
+  "devDependencies": {
+    "vite": "*",
+    "sass": "*",
+    "@sveltejs/vite-plugin-svelte": "*",
+    "svelte": "*"
+  }
+}

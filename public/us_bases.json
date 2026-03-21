@@ -1,0 +1,255 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Al Udeid Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [51.314, 25.117]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camp As Sayliyah"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [51.521, 25.204]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Naval Support Activity Bahrain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [50.608, 26.236]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camp Arifjan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.791, 28.873]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camp Buehring"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.689, 29.346]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ali Al Salem Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.52, 29.346]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camp Patriot"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [48.13, 29.1]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camp Spearhead"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [48.127, 29.096]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Al Dhafra Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [54.547, 24.248]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prince Sultan Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.58, 24.062]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duqm Port"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [57.703, 19.669]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ain al-Asad Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [42.441, 33.785]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Erbil Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.963, 36.237]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Qayyarah West Airfield"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.294, 35.797]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Baghdad Diplomatic Support Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.361, 33.312]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Al-Tanf Garrison"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.618, 33.489]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Conoco Gas Field Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.148, 35.334]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Muwaffaq Salti Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.782, 31.833]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "King Abdullah II Special Operations Training Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.9, 31.72]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nevatim Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.012, 31.208]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Site 512 Negev Radar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.882, 30.997]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "NAMRU-3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.235, 30.047]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camp Lemonnier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.159, 11.547]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Incirlik Air Base"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.425, 37.001]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "RAF Akrotiri"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.988, 34.59]
+      }
+    }
+  ]
+}
